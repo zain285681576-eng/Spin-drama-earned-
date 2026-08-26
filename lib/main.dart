@@ -42,3 +42,31 @@ class _HomePageState extends State<HomePage> {
   }
 
   _
+  _addCoins() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      coins += 10;
+    });
+    prefs.setInt('coins', coins);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Spin Drama Earned')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Your Coins: $coins', style: const TextStyle(fontSize: 24)),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _addCoins,
+              child: const Text('Earn 10 Coins'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}  
