@@ -13,3 +13,16 @@ flutter:
 
   flutter_fortune_wheel: ^1.2.0
   google_mobile_ads: ^4.0.0
+name: spin_drama_earned
+description: Spin Drama Earning App
+publish_to: 'none'
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.2.2
+  flutter_fortune_wheel: ^1.2.0
+  google_mobile_ads: ^4.0.0
+flutter:
+  uses-material-design: true
